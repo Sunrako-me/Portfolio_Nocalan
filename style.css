@@ -1,0 +1,515 @@
+/* ==========================================
+   Google Fonts & Global Variables 
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: #ffffff;
+    --main-color: #ff6b00; /* Vibrant orange accent */
+    --p-color: #b0b0b0;
+}
+
+html {
+    /* Scaled base down from 16px to 8px (50%) to shrink layout size globally */
+    font-size: 50%; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+span {
+    color: var(--main-color);
+}
+
+/* ==========================================
+   Reusable UI Components
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2.2rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 0.8rem var(--main-color);
+    font-size: 1.4rem;
+    color: var(--bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: none;
+    transform: scale(1.05);
+}
+
+.section-content {
+    min-height: auto;
+    padding: 7rem 9% 4rem; /* Tightened section margins */
+    background: var(--bg-color);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 9%;
+    min-height: 85vh; /* Drop from 100vh to fit screens beautifully */
+    gap: 6rem;
+    background: var(--bg-color);
+}
+
+.title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+}
+
+/* ==========================================
+   Profile Pictures (Big and Small Circles)
+   ========================================== */
+.profile-img-fallback {
+    width: 22vw;  
+    height: 22vw; 
+    background-image: url('formal_pic.jpg'); /* Links directly to your photo */
+    background-size: cover;
+    background-position: center top; /* Alignment point to keep your head/hair perfectly in frame */
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--main-color);
+    transition: 0.5s ease;
+}
+
+.profile-img-fallback:hover {
+    box-shadow: 0 0 35px var(--main-color);
+}
+
+.profile-img-fallback-small {
+    width: 18vw;  
+    height: 18vw;
+    background-image: url('formal_pic.jpg'); /* Mirrors picture to about me section */
+    background-size: cover;
+    background-position: center top;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Keeps fluid blob design profile shape */
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.3);
+}
+
+/* ==========================================
+   Navigation Bar
+   ========================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background: rgba(8, 8, 8, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+}
+
+.links .link {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 3.5rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.links .link:hover,
+.links .link.active {
+    color: var(--main-color);
+}
+
+.hamburger {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+/* ==========================================
+   Home Content Sizing
+   ========================================== */
+.content h1 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.content h3 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.content p {
+    font-size: 1.5rem;
+    color: var(--p-color);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: var(--main-color);
+    transition: 0.5s ease;
+}
+
+.social-links a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 1.2rem var(--main-color);
+}
+
+.typewriter-text {
+    border-right: 3px solid var(--main-color);
+    animation: blink 0.7s infinite alternate;
+}
+
+@keyframes blink {
+    from { border-color: transparent }
+    to { border-color: var(--main-color) }
+}
+
+/* ==========================================
+   About Section
+   ========================================== */
+#about {
+    background: var(--second-bg-color);
+}
+
+.about-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
+
+.about-details .right h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.about-details .right p {
+    font-size: 1.5rem;
+    color: var(--p-color);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+/* ==========================================
+   Skills Section
+   ========================================== */
+.skills-details {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+.skills-details .text {
+    flex: 1;
+}
+
+.skills-details .text h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.skills-details .text p {
+    font-size: 1.5rem;
+    color: var(--p-color);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.experience {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.experience .num {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+.experience .exp {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.skills-details .boxes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.skills-details .box {
+    background: var(--second-bg-color);
+    padding: 1.5rem 2rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s ease;
+}
+
+.skills-details .box:hover {
+    border-color: var(--main-color);
+    transform: translateY(-2px);
+}
+
+.skills-details .box h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.skills-details .box .per {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+/* ==========================================
+   Services Section
+   ========================================== */
+#services {
+    background: var(--second-bg-color);
+}
+
+.services-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.service-box {
+    background: var(--bg-color);
+    padding: 3.5rem 2.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.4s ease;
+}
+
+.service-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.service-box i {
+    font-size: 4.5rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-box h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.service-box p {
+    font-size: 1.4rem;
+    color: var(--p-color);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Contact Section
+   ========================================== */
+.contact-card {
+    background: var(--second-bg-color);
+    padding: 4.5rem 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    max-width: 650px;
+    margin: 2rem auto;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    font-size: 1.5rem;
+    color: var(--p-color);
+    margin-bottom: 2.5rem;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+.footer {
+    background: var(--bg-color);
+    padding: 2rem 9%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer p {
+    font-size: 1.4rem;
+    color: var(--p-color);
+}
+
+/* ==========================================
+   Media Queries (Responsiveness)
+   ========================================== */
+@media (max-width: 1200px) {
+    html {
+        font-size: 48%;
+    }
+    .navbar {
+        padding: 1.5rem 5%;
+    }
+    .main-container, .section-content, .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 991px) {
+    .hamburger {
+        display: block;
+    }
+
+    .links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 5%;
+        background: rgba(8, 8, 8, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: none;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    .links .link {
+        display: block;
+        font-size: 1.8rem;
+        margin: 0.8rem 0;
+        margin-left: 0;
+    }
+
+    .main-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 3rem;
+        text-align: center;
+        padding-top: 10rem;
+    }
+
+    .profile-img-fallback {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .about-details {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .profile-img-fallback-small {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .skills-details {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .services-boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 617px) {
+    .services-boxes {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-img-fallback {
+        width: 55vw;
+        height: 55vw;
+    }
+
+    .profile-img-fallback-small {
+        width: 45vw;
+        height: 45vw;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+}

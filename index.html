@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edison Nocalam | Portfolio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Edison<span>.</span></div>
+            <div class="links">
+                <a href="#home" class="link">Home</a>
+                <a href="#about" class="link">About</a>
+                <a href="#skills" class="link">Skills</a>
+                <a href="#services" class="link">Services</a>
+                <a href="#contact" class="link">Contact</a>
+            </div>
+            <i class="fa-solid fa-bars hamburger" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+
+    <section id="home" class="main-container">
+        <div class="image" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="profile-img-fallback"></div> 
+        </div>
+        <div class="content" data-aos="fade-left" data-aos-duration="1500">
+            <h1>Hey I'm <span>Edison</span></h1>
+            <h3 class="typewriter">I'm a <span class="typewriter-text">Developer/Editor</span></h3>
+            <p>Welcome to my professional portfolio. I specialize in building sleek, modern, and highly functional web applications and hardware integrations.</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/Sunrako-me" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/share/1NmX1N34es/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/edison.vn/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:edisonnocalan@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            
+            <a href="#contact" class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <section id="about" class="section-content">
+        <div class="title" data-aos="fade-up" data-aos-duration="1200">
+            <h2>About <span>Me</span></h2>
+        </div>
+        <div class="about-details">
+            <div class="left" data-aos="fade-right" data-aos-duration="1200">
+                <div class="profile-img-fallback-small"></div>
+            </div>
+            <div class="right" data-aos="fade-left" data-aos-duration="1200">
+                <h3>Coding/Editing is My Passion</h3>
+                <p>I am driven by creating robust software and combining it with hardware mechanisms. From structuring intuitive databases to engineering automated sensory dashboards, I bridge the physical and digital space seamlessly.</p>
+                <a href="https://drive.google.com/file/d/1uryrJq-lBHetqTiF4y3cROhJau8U8vLn/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-content">
+        <div class="title" data-aos="fade-up" data-aos-duration="1200">
+            <h2>My <span>Skills</span></h2>
+        </div>
+        <div class="skills-details">
+            <div class="text" data-aos="fade-right" data-aos-duration="1200">
+                <h3>Skills Reflect My Knowledge</h3>
+                <p>A breakdown of my foundational development stack and technical expertise across web systems and microcontrollers.</p>
+                <div class="experience">
+                    <span class="num">Hobby</span>
+                    <span class="exp">2 Years Of<br>Experience</span>
+                </div>
+            </div>
+            <div class="boxes" data-aos="fade-left" data-aos-duration="1200">
+                <div class="box"><h4>HTML/CSS</h4><div class="per">40%</div></div>
+                <div class="box"><h4>JavaScript</h4><div class="per">35%</div></div>
+                <div class="box"><h4>PHP & Java</h4><div class="per">15%</div></div>
+                <div class="box"><h4>MySQL Database</h4><div class="per">25%</div></div>
+                <div class="box"><h4>Capcut</h4><div class="per">90%</div></div>
+                <div class="box"><h4>Adobe Photoshop</h4><div class="per">25%</div></div>
+                <div class="box"><h4>Canva </h4><div class="per">100%</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-content">
+        <div class="title" data-aos="fade-up" data-aos-duration="1200">
+            <h2>My <span>Services</span></h2>
+        </div>
+        <div class="services-boxes" data-aos="fade-up" data-aos-duration="1500">
+            <div class="service-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Building clean, responsive full-stack portals and control dashboards custom-fitted for smooth user tasks.</p>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-camera"></i>
+                <h3>Editing</h3>
+                <p>Crafting and polishing high-quality digital media by blending video, audio, and graphics into compelling visual stories using modern editing platforms.</p>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-robot"></i>
+                <h3>AI content</h3>
+                <p>Leveraging advanced generative AI models to streamline workflows, accelerate content generation, and optimize creative processes with intelligent automation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-content">
+        <div class="contact-card" data-aos="zoom-in" data-aos-duration="1200">
+            <h2>Have Any Project?</h2>
+            <p>Let's collaborate to bring your automated hardware dreams or web applications to life.</p>
+            <a href="mailto:edisonnocalan@gmail.com" class="btn">Let's Chat</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Created By <span>Edison Nocalam</span> | © 2026 All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            offset: 100,
+            once: true
+        });
+    </script>
+</body>
+</html>
