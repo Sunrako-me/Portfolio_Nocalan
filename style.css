@@ -1,18 +1,14 @@
-/* ==========================================
-   Google Fonts & Global Variables 
-   ========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
     --bg-color: #080808;
     --second-bg-color: #131313;
     --text-color: #ffffff;
-    --main-color: #ff6b00; /* Vibrant orange accent */
+    --main-color: #ff6b00; 
     --p-color: #b0b0b0;
 }
 
 html {
-    /* Scaled base down from 16px to 8px (50%) to shrink layout size globally */
     font-size: 50%; 
 }
 
@@ -37,9 +33,6 @@ span {
     color: var(--main-color);
 }
 
-/* ==========================================
-   Reusable UI Components
-   ========================================== */
 .btn {
     display: inline-block;
     padding: 0.8rem 2.2rem;
@@ -61,7 +54,7 @@ span {
 
 .section-content {
     min-height: auto;
-    padding: 7rem 9% 4rem; /* Tightened section margins */
+    padding: 7rem 9% 4rem;
     background: var(--bg-color);
 }
 
@@ -70,7 +63,7 @@ span {
     justify-content: center;
     align-items: center;
     padding: 0 9%;
-    min-height: 85vh; /* Drop from 100vh to fit screens beautifully */
+    min-height: 85vh;
     gap: 6rem;
     background: var(--bg-color);
 }
@@ -81,15 +74,12 @@ span {
     margin-bottom: 4rem;
 }
 
-/* ==========================================
-   Profile Pictures (Big and Small Circles)
-   ========================================== */
 .profile-img-fallback {
     width: 22vw;  
     height: 22vw; 
-    background-image: url('formal_pic.jpg'); /* Links directly to your photo */
+    background-image: url('formal_pic.jpg');
     background-size: cover;
-    background-position: center top; /* Alignment point to keep your head/hair perfectly in frame */
+    background-position: center top;
     border-radius: 50%;
     box-shadow: 0 0 20px var(--main-color);
     transition: 0.5s ease;
@@ -102,16 +92,13 @@ span {
 .profile-img-fallback-small {
     width: 18vw;  
     height: 18vw;
-    background-image: url('formal_pic.jpg'); /* Mirrors picture to about me section */
+    background-image: url('formal_pic.jpg');
     background-size: cover;
     background-position: center top;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Keeps fluid blob design profile shape */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     box-shadow: 0 0 15px rgba(255, 107, 0, 0.3);
 }
 
-/* ==========================================
-   Navigation Bar
-   ========================================== */
 .navbar {
     position: fixed;
     top: 0;
@@ -161,9 +148,6 @@ span {
     display: none;
 }
 
-/* ==========================================
-   Home Content Sizing
-   ========================================== */
 .content h1 {
     font-size: 4.8rem;
     font-weight: 700;
@@ -220,9 +204,6 @@ span {
     to { border-color: var(--main-color) }
 }
 
-/* ==========================================
-   About Section
-   ========================================== */
 #about {
     background: var(--second-bg-color);
 }
@@ -247,9 +228,6 @@ span {
     margin-bottom: 2.5rem;
 }
 
-/* ==========================================
-   Skills Section
-   ========================================== */
 .skills-details {
     display: flex;
     align-items: center;
@@ -325,9 +303,67 @@ span {
     color: var(--main-color);
 }
 
-/* ==========================================
-   Services Section
-   ========================================== */
+#projects {
+    background: var(--bg-color);
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: var(--second-bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    padding: 3.5rem 2.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    border-color: var(--main-color);
+    transform: translateY(-5px);
+}
+
+.project-icon-box {
+    width: 6rem;
+    height: 6rem;
+    background: rgba(255, 107, 0, 0.1);
+    color: var(--main-color);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-card h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1.4rem;
+    color: var(--p-color);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.project-btn {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
 #services {
     background: var(--second-bg-color);
 }
@@ -371,34 +407,6 @@ span {
     line-height: 1.6;
 }
 
-/* ==========================================
-   Contact Section
-   ========================================== */
-.contact-card {
-    background: var(--second-bg-color);
-    padding: 4.5rem 3rem;
-    border-radius: 2rem;
-    text-align: center;
-    max-width: 650px;
-    margin: 2rem auto;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-}
-
-.contact-card h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.contact-card p {
-    font-size: 1.5rem;
-    color: var(--p-color);
-    margin-bottom: 2.5rem;
-}
-
-/* ==========================================
-   Footer
-   ========================================== */
 .footer {
     background: var(--bg-color);
     padding: 2rem 9%;
@@ -411,9 +419,6 @@ span {
     color: var(--p-color);
 }
 
-/* ==========================================
-   Media Queries (Responsiveness)
-   ========================================== */
 @media (max-width: 1200px) {
     html {
         font-size: 48%;
@@ -489,7 +494,7 @@ span {
         gap: 4rem;
     }
 
-    .services-boxes {
+    .projects-grid, .services-boxes {
         grid-template-columns: repeat(2, 1fr);
     }
 }

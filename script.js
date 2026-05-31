@@ -1,12 +1,8 @@
-// ==========================================
-// 1. Mobile Menu Toggle Logic
-// ==========================================
 function toggleMenu() {
     const links = document.querySelector('.links');
     links.classList.toggle('active');
 }
 
-// Automatically dismiss the nav overlay when options get clicked
 document.querySelectorAll('.links .link').forEach(link => {
     link.addEventListener('click', () => {
         const linksMenu = document.querySelector('.links');
@@ -16,9 +12,6 @@ document.querySelectorAll('.links .link').forEach(link => {
     });
 });
 
-// ==========================================
-// 2. Dynamic Typewriter Effect Logic
-// ==========================================
 const typewriterText = document.querySelector('.typewriter-text');
 const words = ["Developer/Editor", "Tech Enthusiast", "Problem Solver"];
 let wordIndex = 0;
